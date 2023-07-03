@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client",
+    "e2e"
+  ],
+  "scripts": {
+    "build:client": "yarn workspace sibling-spotter-client build",
+    "dev": "yarn workspace sibling-spotter-server dev",
+    "dev:debug": "yarn workspace sibling-spotter-server dev:debug",
+    "heroku-postbuild": "yarn workspace sibling-spotter-client build",
+    "start": "yarn workspace sibling-spotter-server start",
+    "dev:cypress": "yarn workspace sibling-spotter-server dev:e2e",
+    "e2e:open": "yarn workspace sibling-spotter-e2e e2e:open",
+    "e2e:run": "yarn workspace sibling-spotter-e2e e2e:run"
+  },
+  "engines": {
+    "node": "^16.18"
+  }
+}
