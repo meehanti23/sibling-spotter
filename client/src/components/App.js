@@ -34,9 +34,9 @@ const App = (props) => {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <Route exact path="/tim" compnent={Tim} />
-        <Route exact path="/cameron" compnent={Cameron} />
-        <Route exact path="/jeremy" compnent={Jeremy} />
+        <Route exact path="/tim" component={Tim} />
+        <Route exact path="/cameron" component={Cameron} />
+        <Route exact path="/jeremy" component={Jeremy} />
       </Switch>
     </Router>
   );
