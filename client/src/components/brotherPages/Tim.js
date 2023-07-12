@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 
-const Tim = () => {
-    const [longitude, setLongitude] = useState(null);
-    const [latitude, setLatitude] = useState(null);
-
+const Tim = (props) => {
+    const [longitude, setlongitude] = useState(null);
+    const [latitude, setlatitude] = useState(null);
+    
     const fetchTimCoordinates = async () => {
         try {
-            const response = await axios.get("/api/v1/locationRouter/tim");
-            setLongitude(response.data.lon);
-            setLatitude(response.data.lat);
+          const response = await axios.get("/api/v1/locationRouter/tim");
+          setlongitude(response.data.lon);
+          setlatitude(response.data.lat);
+        } catch (error) {
+          console.log(error);
         }
-        catch (error) {
-            console.log(error);
-        }
-    }
+    };
 
     useEffect(() => {
         fetchTimCoordinates();
