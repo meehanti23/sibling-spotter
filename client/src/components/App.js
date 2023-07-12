@@ -6,7 +6,6 @@ import getCurrentUser from "../services/getCurrentUser";
 import "../assets/scss/main.scss";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
-import TopBar from "./layout/TopBar";
 import Homepage from "./Homepage";
 import Tim from "./brotherPages/Tim";
 import Cameron from "./brotherPages/Cameron";
@@ -29,7 +28,6 @@ const App = (props) => {
 
   return (
     <Router>
-      <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/users/new" component={RegistrationForm} />
