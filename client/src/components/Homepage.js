@@ -3,7 +3,6 @@ import React from "react";
 const Homepage = () => {
     return (
         <div className="homepage-box">
-            <h1>refresh</h1>
             <ul className="homepage-list grid-x">
             <div className="homepage-tile small-3"><a href="/tim">
                 <li className="home-button small-3">Tim

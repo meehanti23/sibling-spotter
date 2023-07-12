@@ -13,20 +13,25 @@
   tab-size: 4;
 }
 
+body {
+  background-color: transparent;
+}
+
 body::before {
-  background-color: green;
   content: "";
-  display: block;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://e0.pxfuel.com/wallpapers/26/310/desktop-wallpaper-old-nautical-chart-background-vintage-map.jpg");
   z-index: -1;
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .homepage-box {
-  background-color: #fff;
+  background-color: #B05F66;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 15px;
@@ -41,28 +46,38 @@ body::before {
   list-style-type: none;
 }
 
-.home-button {
-  background-color: greenyellow;
-  border: 1px solid black;
-  border-radius: 4px;
+.homepage-box {
+  background-color: #B05F66;
+  border: .2em solid black;
+  border-radius: 1em;
   padding: 15px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  font-weight: 900;
-  font-size: 1.2em;
+  margin-top: 3em;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage-tile {
+  margin-top: 3.5em;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3.5em;
+  border: 1px solid black;
+  background-color: #82A775;
 }
 
 .tile-picture {
-  width: 12em;
-  height: 12em;
-  margin-top: 1em;
+  width: 10em;
+  height: 8em;
+  align-items: center;
   border: 1px solid black;
 }
 
