@@ -16,12 +16,12 @@
 body {
   background-color: transparent;
   position: relative;
-  margin: 0; /* Add this line */
-  padding: 0; /* Add this line */
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Update this line */
+  min-height: 100vh;
 }
 
 body::before {
@@ -34,7 +34,7 @@ body::before {
   z-index: -1;
   opacity: 0.5;
   background-size: cover;
-  background-repeat: repeat; /* Update this line */
+  background-repeat: repeat;
   background-position: center;
 }
 
@@ -46,12 +46,12 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Update this line */
+  height: 100%;
   width: 100%;
 }
 
 .homepage-box {
-  background-color: #B05F66;
+  background-color: #906C54;
   border: .2em solid black;
   border-radius: 1em;
   width: 80%;
@@ -69,7 +69,7 @@ body::before {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: .2em solid black;
   background-color: #82A775;
   border-radius: .4em;
   overflow: hidden;
@@ -90,4 +90,5 @@ body::before {
   margin-top: .1em;
   color: black;
   text-align: center;
+  font-family: "Pangolin", cursive;
 }
