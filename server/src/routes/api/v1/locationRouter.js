@@ -15,4 +15,17 @@ locationRouter.get("/tim", async (req, res) => {
     }
 });
 
+locationRouter.get("/cameron", async (req, res) => {
+    try {
+        const response = await axios.get("https://dweet.io:443/get/dweets/for/camcamcamtest");
+        const locationData = response.data.with[0].content
+        console.log(locationData, "this is the location data")
+        const { lon, lat } = locationData
+        res.status(200).json({ lon, lat });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ errors: error });
+    }
+});
+
 export default locationRouter;
