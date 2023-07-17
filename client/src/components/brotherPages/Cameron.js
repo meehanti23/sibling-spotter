@@ -49,23 +49,25 @@ const Cameron = (props) => {
 
   return (
     <div className='brother-box'>
-      <div className='box-container'>
-        <div className='weather-box'>
-          <div className="icon-wrapper">
-            <img src={weatherIcon} alt='weather icon' className='weather-icon' />
-          </div>
-          <h2 className="weather-info"><b>Weather:</b> {weatherDescription}</h2>
-          <h2 className="weather-info"><b>Temperature:</b> {temperature}°F</h2>
-          <h2 className="weather-info"><b>Feels Like:</b> {feelsLike}°F</h2>
-          <h2 className="weather-info"><b>Humidity:</b> {humidity}%</h2>
-          <h2 className="weather-info"><b>Wind Speed:</b> {windSpeed} mph</h2>
+        <div className='box-container'>
+            <div className='weather-box'>
+            <div className="icon-wrapper">
+                <img src={weatherIcon} alt='weather icon' className='weather-icon' />
+            </div>
+            <h2 className="weather-info"><b>Weather:</b> {weatherDescription}</h2>
+            <h2 className="weather-info"><b>Temperature:</b> {temperature}°F</h2>
+            <h2 className="weather-info"><b>Feels Like:</b> {feelsLike}°F</h2>
+            <h2 className="weather-info"><b>Humidity:</b> {humidity}%</h2>
+            <h2 className="weather-info"><b>Wind Speed:</b> {windSpeed} mph</h2>
+            </div>
         </div>
-      </div>
-      <div className='box-container'>
-        <div className='brother-picture'>
-          <img src='https://siblingspotter.s3.amazonaws.com/245D3C19-38DC-42A8-84C2-CB2D37AC95F9_1_105_c.jpeg' alt='Cameron' className='brother-photo' />
+        <div className='box-container'>
+            <a href="/">
+                <div className='brother-picture'>
+                    <img src='https://siblingspotter.s3.amazonaws.com/571B3BD4-E73B-49EF-B46B-CCA642E7202F_1_105_c.jpeg' alt='Cameron' className='brother-photo' />
+                </div>
+            </a>
         </div>
-      </div>
     </div>
   );
   

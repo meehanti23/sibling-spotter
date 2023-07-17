@@ -51,7 +51,7 @@ const Homepage = (props) => {
 
     if ((timLonApprox >= -80.02 && timLonApprox <= -80.01) && (timLatApprox >= 33 && timLatApprox <= 33.02)) {
       setTimImage(timHousePNG);
-    } else if ((timLonApprox <= -79.6 && timLonApprox >= -80.4) && (timLatApprox <= 33.2 && timLatApprox >= 32.4)) {
+    } else if ((timLonApprox <= -79.96 && timLonApprox >= -80) && (timLatApprox <= 33.2 && timLatApprox >= 32.89)) {
       setTimImage(charlestonPNG);
     } else if (timLonApprox > -79.6 && timLonApprox < 60) {
       setTimImage(beachPNG)
