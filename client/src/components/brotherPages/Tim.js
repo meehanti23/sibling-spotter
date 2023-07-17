@@ -61,11 +61,13 @@ const Tim = (props) => {
           <h2 className="weather-info"><b>Wind Speed:</b> {windSpeed} mph</h2>
         </div>
       </div>
+      <a href="/">
       <div className='box-container'>
         <div className='brother-picture'>
           <img src='https://siblingspotter.s3.amazonaws.com/245D3C19-38DC-42A8-84C2-CB2D37AC95F9_1_105_c.jpeg' alt='Tim' className='brother-photo' />
         </div>
       </div>
+      </a>
     </div>
   );
   
