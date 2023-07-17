@@ -69,7 +69,7 @@ const Jeremy = (props) => {
       <div className='box-container'>
         <a href="/">        
         <div className='brother-picture'>
-          <img src='https://siblingspotter.s3.amazonaws.com/245D3C19-38DC-42A8-84C2-CB2D37AC95F9_1_105_c.jpeg' alt='Jeremy' className='brother-photo' />
+          <img src='https://siblingspotter.s3.amazonaws.com/A5C3BD23-D159-473A-B8D3-99A30BA837FB.jpeg' alt='Jeremy' className='brother-photo' />
         </div>
         </a>
       </div>
