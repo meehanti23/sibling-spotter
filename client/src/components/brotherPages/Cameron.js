@@ -31,7 +31,6 @@ const Cameron = (props) => {
       try {
         const response = await axios.get(`/api/v1/weatherRouter/weather?q=${q}`);
         const weatherData = response.data;
-        console.log(weatherData);
         setWeatherIcon(weatherData.condition.icon);
         setWeatherDescription(weatherData.condition.text);
         setHumidity(weatherData.humidity);
