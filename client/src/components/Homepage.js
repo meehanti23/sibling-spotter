@@ -44,9 +44,6 @@ const Homepage = (props) => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
 
-    const camHomeLon = -111.00195
-    const camHomeLat = 32.2883
-
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
     const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
@@ -59,7 +56,7 @@ const Homepage = (props) => {
     } else if (timLonApprox > -79.6 && timLonApprox < 60) {
       setTimImage(beachPNG)
     } else {
-        setTimImage(swampPNG)
+      setTimImage(swampPNG)
     }  
 
     if ((camLonApprox >= -112.08 && camLonApprox <= -112.12) && (camLatApprox >= 33.55 && camLatApprox <= 33.59 )) {
@@ -80,47 +77,47 @@ const Homepage = (props) => {
 
   
   return (
-      <div className="homepage-container">
-    <div className="homepage-box">
-      <ul className="homepage-list grid-x">
-        <div className="homepage-tile small-3">
-          <a href="/tim">
-            <li className="home-button small-3 brother-name">
-              Tim
-              <img
-                src={timImage}
-                className="tile-picture"
-                alt="desert"
-              />
-            </li>
-          </a>
+    <div className="homepage-container">
+        <div className="homepage-box">
+            <ul className="homepage-list grid-x">
+                <div className="homepage-tile small-3">
+                    <a href="/tim">
+                        <li className="home-button small-3 brother-name">
+                        Tim
+                        <img
+                            src={timImage}
+                            className="tile-picture"
+                            alt="desert"
+                        />
+                        </li>
+                    </a>
+                </div>
+                <div className="homepage-tile small-3">
+                    <a href="/cameron">
+                        <li className="home-button small-3 brother-name">
+                        Cameron
+                        <img
+                            src={cameronImage}
+                            className="tile-picture"
+                            alt="desert"
+                        />
+                        </li>
+                    </a>
+                </div>
+                <div className="homepage-tile small-3">
+                    <a href="/jeremy">
+                        <li className="home-button small-3 brother-name">
+                        Jeremy
+                        <img
+                            src={airplanePNG}
+                            className="tile-picture"
+                            alt="desert"
+                        />
+                        </li>
+                    </a>
+                </div>
+            </ul>
         </div>
-        <div className="homepage-tile small-3">
-          <a href="/cameron">
-            <li className="home-button small-3 brother-name">
-              Cameron
-              <img
-                src={cameronImage}
-                className="tile-picture"
-                alt="desert"
-              />
-            </li>
-          </a>
-        </div>
-        <div className="homepage-tile small-3">
-          <a href="/jeremy">
-            <li className="home-button small-3 brother-name">
-              Jeremy
-              <img
-                src={airplanePNG}
-                className="tile-picture"
-                alt="desert"
-              />
-            </li>
-          </a>
-        </div>
-      </ul>
-    </div>
     </div>
   );
 };

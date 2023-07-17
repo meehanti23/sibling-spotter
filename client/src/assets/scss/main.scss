@@ -92,3 +92,61 @@ body::before {
   text-align: center;
   font-family: "Pangolin", cursive;
 }
+
+.brother-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #906C54;
+  border: .2em solid black;
+  border-radius: 1em;
+  width: 80%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-container {
+  flex: 1;
+  margin: 0.6em;
+}
+
+.weather-box {
+  border: .2em solid black;
+  background-color: #82A775;
+  border-radius: .4em;
+  display: flex;
+  margin-left: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brother-picture {
+  margin-left: 0.3em; /* Adjust the margin as desired */
+  padding: 0.6em; /* Add padding for spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brother-photo {
+  width: 60%;
+  object-fit: cover;
+  border: .3em ridge black;
+}
+
+.weather-info {
+  font-size: 1em;
+  font-family: "Pangolin", cursive;
+  margin-left: .5em;
+}
+
+.weather-icon {
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: lightblue;
+  align-self: center;
+  margin-top: .8em;
+  margin-left: 1em;
+  margin-bottom: .8em;
+}
