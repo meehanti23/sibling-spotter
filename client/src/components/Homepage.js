@@ -46,8 +46,10 @@ const Homepage = (props) => {
 
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
-    const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
-    const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
+    // const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
+    // const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
+    const camLonApprox = -112.12
+    const camLatApprox = 33.57;
 
     if ((timLonApprox >= -80.02 && timLonApprox <= -80.01) && (timLatApprox >= 33 && timLatApprox <= 33.02)) {
       setTimImage(timHousePNG);
@@ -59,19 +61,21 @@ const Homepage = (props) => {
       setTimImage(swampPNG)
     }  
 
-    if ((camLonApprox >= -112.08 && camLonApprox <= -112.12) && (camLatApprox >= 33.55 && camLatApprox <= 33.59 )) {
-        setCameronImage(camOfficePNG);
+    if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
+      setCameronImage(camOfficePNG);
     } else if ((camLonApprox >= -111.02 && camLonApprox <= -110.08) && (camLatApprox >= 32.2 && camLatApprox <= 32.4)) {
-        setCameronImage(timHousePNG)
+      setCameronImage(timHousePNG);
     } else if ((camLonApprox >= -111.32 && camLonApprox <= -110.82) && (camLatApprox >= 32.11 && camLatApprox <= 32.43)) {
-        setCameronImage(tucsonPNG);
+      setCameronImage(tucsonPNG);
+    } else if (camLonApprox > -111 && camLonApprox < -80.02) {
+      setCameronImage(mexicoPNG);
     } else if ((camLonApprox >= -112.55 && camLonApprox <= -111.6) && (camLatApprox >= 33.1 && camLatApprox <= 33.9)) {
-        setCameronImage(phoenixPNG);
-    } else if (camLonApprox > -111 && camLonApprox < -80) {
-        setCameronImage(mexicoPNG);
+      setCameronImage(phoenixPNG);
     } else {
-        setCameronImage(desertPNG);
+      setCameronImage(desertPNG);
     }
+    console.log(cameronImage)   
+  
 
   }, [timLatitude, timLongitude, timImage, cameronLatitude, cameronLongitude, cameronImage]);
 

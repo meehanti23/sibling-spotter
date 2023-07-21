@@ -21,6 +21,8 @@ const Cameron = (props) => {
     }
   };
 
+  console.log(longitude, latitude);
+
   useEffect(() => {
     fetchCameronCoordinates();
   }, []);
