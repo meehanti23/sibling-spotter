@@ -44,16 +44,19 @@ const Homepage = (props) => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
 
-    const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
-    const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
+    // const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
+    // const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
     const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
     const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
 
+    const timLonApprox = -79.93;
+    const timLatApprox = 32.79;
+
     if ((timLonApprox >= -80.02 && timLonApprox <= -80.01) && (timLatApprox >= 33 && timLatApprox <= 33.02)) {
       setTimImage(timHousePNG);
-    } else if ((timLonApprox <= -79.96 && timLonApprox >= -80) && (timLatApprox <= 33.2 && timLatApprox >= 32.89)) {
+    } else if ((timLonApprox <= -79.91 && timLonApprox >= -80) && (timLatApprox >= 32.76 && timLatApprox <= 32.9)) {
       setTimImage(charlestonPNG);
-    } else if (timLonApprox > -79.6 && timLonApprox < 60) {
+    } else if (timLonApprox > -79.6 && timLonApprox < -60) {
       setTimImage(beachPNG)
     } else {
       setTimImage(swampPNG)
