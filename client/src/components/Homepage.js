@@ -46,10 +46,8 @@ const Homepage = (props) => {
 
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
-    // const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
-    // const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
-    const camLonApprox = -112.12
-    const camLatApprox = 33.57;
+    const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
+    const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
 
     if ((timLonApprox >= -80.02 && timLonApprox <= -80.01) && (timLatApprox >= 33 && timLatApprox <= 33.02)) {
       setTimImage(timHousePNG);
@@ -73,10 +71,7 @@ const Homepage = (props) => {
       setCameronImage(phoenixPNG);
     } else {
       setCameronImage(desertPNG);
-    }
-    console.log(cameronImage)   
-  
-
+    } 
   }, [timLatitude, timLongitude, timImage, cameronLatitude, cameronLongitude, cameronImage]);
 
   
