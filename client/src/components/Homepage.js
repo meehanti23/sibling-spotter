@@ -37,7 +37,7 @@ const Homepage = (props) => {
   const swampPNG = "https://siblingspotter.s3.amazonaws.com/SwampPic-PhotoRoom.png"
   const beachPNG = "https://siblingspotter.s3.amazonaws.com/Beach-PhotoRoom.png"
   const mexicoPNG = "https://siblingspotter.s3.amazonaws.com/Mexico-PhotoRoom.png"
-  const phoenixPNG = "https://siblingspotter.s3.amazonaws.com/Phoenix-PhotoRoom.png"
+  const phoenixPNG = "https://siblingspotter.s3.amazonaws.com/MainPhoenix-PhotoRoom.png"
   const tucsonPNG = "https://siblingspotter.s3.amazonaws.com/Tucson-PhotoRoom.png"
   
   useEffect(() => {
