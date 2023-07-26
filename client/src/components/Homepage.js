@@ -40,7 +40,8 @@ const Homepage = (props) => {
   const phoenixPNG = "https://siblingspotter.s3.amazonaws.com/MainPhoenix-PhotoRoom.png"
   const tucsonPNG = "https://siblingspotter.s3.amazonaws.com/Tucson-PhotoRoom.png"
   const newHampshirePNG = "https://siblingspotter.s3.amazonaws.com/NHLogo-PhotoRoom.png"
-  
+  const camHousePNG = "https://siblingspotter.s3.amazonaws.com/CamHouse-PhotoRoom.png-PhotoRoom.png"
+
   useEffect(() => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
@@ -63,7 +64,7 @@ const Homepage = (props) => {
     if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
       setCameronImage(camOfficePNG);
     } else if ((camLonApprox >= -111.01 && camLonApprox <= -110.09) && (camLatApprox >= 32.2 && camLatApprox <= 32.4)) {
-      setCameronImage(timHousePNG);
+      setCameronImage(camHousePNG);
     } else if ((camLonApprox >= -111.32 && camLonApprox <= -110.82) && (camLatApprox >= 32.11 && camLatApprox <= 32.43)) {
       setCameronImage(tucsonPNG);
     } else if (camLonApprox > -111 && camLonApprox < -80.02) {
@@ -97,7 +98,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Cameron
                         <img
-                            src={tucsonPNG}
+                            src={cameronImage}
                             className="tile-picture"
                             alt="desert"
                         />
