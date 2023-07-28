@@ -130,7 +130,7 @@ body::before {
 }
 
 .brother-photo-container {
-  height: 100%;
+  max-height: 30em;
   width: 100%;
   display: flex;
   justify-content: center;
