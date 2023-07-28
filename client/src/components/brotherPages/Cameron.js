@@ -21,8 +21,6 @@ const Cameron = (props) => {
     }
   };
 
-  console.log(longitude, latitude);
-
   useEffect(() => {
     fetchCameronCoordinates();
   }, []);
@@ -49,6 +47,12 @@ const Cameron = (props) => {
     }
   }, [longitude, latitude]);
 
+  const camPictures = [
+    'https://i.ibb.co/6v5Zcgp/cam.jpg',
+    'https://i.ibb.co/2nMtBrN/camandmom.jpg',
+    'https://i.ibb.co/NtmNZw6/youngccam.jpg'
+  ]
+
   return (
     <div className='brother-box'>
         <div className='box-container'>
@@ -66,7 +70,7 @@ const Cameron = (props) => {
         <div className='box-container'>
             <a href="/">
                 <div className='brother-picture'>
-                    <img src='https://siblingspotter.s3.amazonaws.com/571B3BD4-E73B-49EF-B46B-CCA642E7202F_1_105_c.jpeg' alt='Cameron' className='brother-photo' />
+                    <img src='https://i.ibb.co/6v5Zcgp/cam.jpg' alt='Cameron' className='brother-photo' />
                 </div>
             </a>
         </div>

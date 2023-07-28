@@ -125,6 +125,7 @@ body::before {
 }
 
 .brother-picture {
+  width: 100%;
   margin-left: 0.8em;
   padding: 0.6em;
   display: flex;
@@ -134,7 +135,7 @@ body::before {
 
 .brother-photo {
   height: 30em;
-  width: 30em;
+  width: 100%;
   object-fit: cover;
   border: .3em ridge black;
 }
