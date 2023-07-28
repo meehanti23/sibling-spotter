@@ -125,19 +125,24 @@ body::before {
 }
 
 .brother-picture {
-  width: 100%;
   margin-left: 0.8em;
   padding: 0.6em;
+}
+
+.brother-photo-container {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: .3em ridge black;
+  overflow: hidden;
 }
 
 .brother-photo {
-  height: 30em;
-  width: 100%;
-  object-fit: cover;
-  border: .3em ridge black;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .weather-info {

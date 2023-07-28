@@ -10,6 +10,7 @@ const Tim = (props) => {
   const [windSpeed, setWindSpeed] = useState(null);
   const [temperature, setTemperature] = useState(null);
   const [feelsLike, setFeelsLike] = useState(null);
+  const [timPic, setTimPic] = useState(null);
 
   const fetchTimCoordinates = async () => {
     try {
@@ -23,6 +24,7 @@ const Tim = (props) => {
 
   useEffect(() => {
     fetchTimCoordinates();
+    getRandomTimPic();
   }, []);
 
   useEffect(() => {
@@ -47,6 +49,19 @@ const Tim = (props) => {
     }
   }, [longitude, latitude]);
 
+  const timPictures = [
+    'https://siblingspotter.s3.amazonaws.com/245D3C19-38DC-42A8-84C2-CB2D37AC95F9_1_105_c.jpeg',
+    'https://i.ibb.co/9r6ndws/timandabbie.jpg',
+    'https://i.ibb.co/MZTH47w/timandabbie22.jpg',
+    'https://i.ibb.co/jVd7Wn9/timandthewomen.jpg',
+    'https://i.ibb.co/JkPcb7K/timandmom.jpg'
+  ]
+
+  const getRandomTimPic = () => {
+    const randomIndex = Math.floor(Math.random() * timPictures.length);
+    setTimPic(timPictures[randomIndex]);
+  }
+
   return (
     <div className='brother-box'>
       <div className='box-container'>
@@ -61,13 +76,15 @@ const Tim = (props) => {
           <h2 className="weather-info"><b>Wind Speed:</b> {windSpeed} mph</h2>
         </div>
       </div>
-      <a href="/">
       <div className='box-container'>
-        <div className='brother-picture'>
-          <img src='https://siblingspotter.s3.amazonaws.com/245D3C19-38DC-42A8-84C2-CB2D37AC95F9_1_105_c.jpeg' alt='Tim' className='brother-photo' />
-        </div>
+        <a href="/">
+          <div className='brother-picture'>
+            <div className='brother-photo-container'>
+              <img src={timPic} alt='Tim' className='brother-photo' />
+            </div>
+          </div>
+        </a>
       </div>
-      </a>
     </div>
   );
   

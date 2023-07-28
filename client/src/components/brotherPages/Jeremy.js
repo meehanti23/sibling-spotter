@@ -10,6 +10,7 @@ const Jeremy = (props) => {
   const [windSpeed, setWindSpeed] = useState(null);
   const [temperature, setTemperature] = useState(null);
   const [feelsLike, setFeelsLike] = useState(null);
+  const [jermPic, setJermPic] = useState(null);
 
 //   const fetchJeremyCoordinates = async () => {
 //     try {
@@ -29,6 +30,7 @@ const Jeremy = (props) => {
   const latitude = '48.7519'
 
   useEffect(() => {
+    getRandomJermPic();
     const fetchJeremyWeather = async () => {
     //   const q = `${latitude},${longitude}`;
     const q = '48.7519,-122.4787'
@@ -52,6 +54,20 @@ const Jeremy = (props) => {
     }
   }, [longitude, latitude]);
 
+  const jeremyPictures = [
+    'https://i.ibb.co/y5MGhGS/timssurprisebday.jpg',
+    'https://i.ibb.co/V2s4Qfc/allofus.jpg',
+    'https://siblingspotter.s3.amazonaws.com/A5C3BD23-D159-473A-B8D3-99A30BA837FB.jpeg',
+    'https://i.ibb.co/TrXNZyR/jm1.jpg',
+    'https://i.ibb.co/TT6R2Zr/jm2.jpg',
+    'https://i.ibb.co/X8TtC4g/janddad.jpg'
+  ];
+
+  const getRandomJermPic = () => {
+    const randomIndex = Math.floor(Math.random() * jeremyPictures.length);
+    setJermPic(jeremyPictures[randomIndex]);
+  };
+
   return (
     <div className='brother-box'>
       <div className='box-container'>
@@ -69,7 +85,9 @@ const Jeremy = (props) => {
       <div className='box-container'>
         <a href="/">        
         <div className='brother-picture'>
-          <img src='https://siblingspotter.s3.amazonaws.com/A5C3BD23-D159-473A-B8D3-99A30BA837FB.jpeg' alt='Jeremy' className='brother-photo' />
+          <div className='brother-photo-container'>
+            <img src={jermPic} alt='Jeremy' className='brother-photo' />
+          </div>
         </div>
         </a>
       </div>

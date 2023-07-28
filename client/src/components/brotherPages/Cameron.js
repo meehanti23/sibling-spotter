@@ -10,6 +10,7 @@ const Cameron = (props) => {
   const [windSpeed, setWindSpeed] = useState(null);
   const [temperature, setTemperature] = useState(null);
   const [feelsLike, setFeelsLike] = useState(null);
+  const [camPic, setCamPic] = useState(null);
 
   const fetchCameronCoordinates = async () => {
     try {
@@ -23,6 +24,7 @@ const Cameron = (props) => {
 
   useEffect(() => {
     fetchCameronCoordinates();
+    getRandomCamPic();
   }, []);
 
   useEffect(() => {
@@ -50,8 +52,15 @@ const Cameron = (props) => {
   const camPictures = [
     'https://i.ibb.co/6v5Zcgp/cam.jpg',
     'https://i.ibb.co/2nMtBrN/camandmom.jpg',
-    'https://i.ibb.co/NtmNZw6/youngccam.jpg'
+    'https://i.ibb.co/NtmNZw6/youngccam.jpg',
+    'https://i.ibb.co/tq4MZk4/camandtim.jpg',
+    'https://i.ibb.co/jh5xvJc/allofus2.jpg'
   ]
+
+  const getRandomCamPic = () => {
+    const randomIndex = Math.floor(Math.random() * camPictures.length);
+    setCamPic(camPictures[randomIndex]);
+  }
 
   return (
     <div className='brother-box'>
@@ -69,9 +78,11 @@ const Cameron = (props) => {
         </div>
         <div className='box-container'>
             <a href="/">
-                <div className='brother-picture'>
-                    <img src='https://i.ibb.co/6v5Zcgp/cam.jpg' alt='Cameron' className='brother-photo' />
+              <div className='brother-picture'>
+                <div className='brother-photo-container'>
+                  <img src={camPic} alt='Cameron' className='brother-photo' />
                 </div>
+              </div>
             </a>
         </div>
     </div>
