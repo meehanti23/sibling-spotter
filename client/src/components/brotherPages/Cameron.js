@@ -54,7 +54,13 @@ const Cameron = (props) => {
     'https://i.ibb.co/2nMtBrN/camandmom.jpg',
     'https://i.ibb.co/NtmNZw6/youngccam.jpg',
     'https://i.ibb.co/tq4MZk4/camandtim.jpg',
-    'https://i.ibb.co/jh5xvJc/allofus2.jpg'
+    'https://i.ibb.co/jh5xvJc/allofus2.jpg',
+    'https://siblingspotter.s3.amazonaws.com/cameroon1.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/cameroonBoots.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/cameroonFair.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/camMotorcycle.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/camJermView.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/camSaltMarsh.jpeg'
   ]
 
   const getRandomCamPic = () => {

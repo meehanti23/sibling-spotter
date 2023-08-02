@@ -60,7 +60,13 @@ const Jeremy = (props) => {
     'https://siblingspotter.s3.amazonaws.com/A5C3BD23-D159-473A-B8D3-99A30BA837FB.jpeg',
     'https://i.ibb.co/TrXNZyR/jm1.jpg',
     'https://i.ibb.co/TT6R2Zr/jm2.jpg',
-    'https://i.ibb.co/X8TtC4g/janddad.jpg'
+    'https://i.ibb.co/X8TtC4g/janddad.jpg',
+    'https://siblingspotter.s3.amazonaws.com/jermBeach.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/jermCamRockBeach.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/jermSki.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/jermFogMountain.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/jermLake.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/jermTwoMinutes.jpeg'
   ];
 
   const getRandomJermPic = () => {

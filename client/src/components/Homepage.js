@@ -41,6 +41,7 @@ const Homepage = (props) => {
   const tucsonPNG = "https://siblingspotter.s3.amazonaws.com/Tucson-PhotoRoom.png"
   const newHampshirePNG = "https://siblingspotter.s3.amazonaws.com/pngwing.com+(1).png"
   const camHousePNG = "https://siblingspotter.s3.amazonaws.com/CamHouse-PhotoRoom.png-PhotoRoom.png"
+  const washingtonPNG = "https://siblingspotter.s3.amazonaws.com/washingtonPNG.png"
 
   useEffect(() => {
     fetchCameronCoordinates();
@@ -110,7 +111,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Jeremy
                         <img
-                            src={airplanePNG}
+                            src={washingtonPNG}
                             className="tile-picture"
                             alt="desert"
                         />
