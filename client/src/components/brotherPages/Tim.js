@@ -57,7 +57,8 @@ const Tim = (props) => {
     'https://i.ibb.co/JkPcb7K/timandmom.jpg',
     'https://siblingspotter.s3.amazonaws.com/teemBoat.jpeg',
     'https://siblingspotter.s3.amazonaws.com/teemEpcot.jpeg',
-    'https://siblingspotter.s3.amazonaws.com/teemHiltonHead.jpeg'
+    'https://siblingspotter.s3.amazonaws.com/teemHiltonHead.jpeg',
+    'https://i.ibb.co/2ycPBm5/allofus1.jpg'
   ]
 
   const getRandomTimPic = () => {
