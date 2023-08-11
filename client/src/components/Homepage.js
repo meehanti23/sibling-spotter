@@ -42,6 +42,7 @@ const Homepage = (props) => {
   const newHampshirePNG = "https://siblingspotter.s3.amazonaws.com/pngwing.com+(1).png"
   const camHousePNG = "https://siblingspotter.s3.amazonaws.com/CamHouse-PhotoRoom.png-PhotoRoom.png"
   const washingtonPNG = "https://siblingspotter.s3.amazonaws.com/washingtonPNG.png"
+  const camUniversityPNG = "https://siblingspotter.s3.amazonaws.com/%E2%80%94Pngtree%E2%80%94school+building+cartoon+classroom+school_5701074.png"
 
   useEffect(() => {
     fetchCameronCoordinates();
@@ -62,10 +63,14 @@ const Homepage = (props) => {
       setTimImage(swampPNG)
     }  
 
+    console.log(camLonApprox, camLatApprox)
+
     if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
       setCameronImage(camOfficePNG);
-    } else if ((camLonApprox >= -111.01 && camLonApprox <= -110.09) && (camLatApprox >= 32.2 && camLatApprox <= 32.4)) {
+    } else if ((camLonApprox >= -111.01 && camLonApprox <= -111) && (camLatApprox >= 32.2 && camLatApprox <= 32.3)) {
       setCameronImage(camHousePNG);
+    } else if ((camLonApprox >= -110.94 && camLonApprox <= -110.96) && (camLatApprox >= 32.23 && camLatApprox <= 32.24)) {
+      setCameronImage(camUniversityPNG);
     } else if ((camLonApprox >= -111.32 && camLonApprox <= -110.82) && (camLatApprox >= 32.11 && camLatApprox <= 32.43)) {
       setCameronImage(tucsonPNG);
     } else if (camLonApprox > -111 && camLonApprox < -80.02) {
