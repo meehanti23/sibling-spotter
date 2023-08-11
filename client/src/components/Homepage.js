@@ -87,7 +87,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Tim
                         <img
-                            src={airplanePNG}
+                            src={newHampshirePNG}
                             className="tile-picture"
                             alt="desert"
                         />
