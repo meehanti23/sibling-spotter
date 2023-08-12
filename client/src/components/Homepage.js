@@ -63,8 +63,6 @@ const Homepage = (props) => {
       setTimImage(swampPNG)
     }  
 
-    console.log(camLonApprox, camLatApprox)
-
     if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
       setCameronImage(camOfficePNG);
     } else if ((camLonApprox >= -111.01 && camLonApprox <= -111) && (camLatApprox >= 32.2 && camLatApprox <= 32.3)) {
@@ -73,7 +71,7 @@ const Homepage = (props) => {
       setCameronImage(camUniversityPNG);
     } else if ((camLonApprox >= -111.32 && camLonApprox <= -110.82) && (camLatApprox >= 32.11 && camLatApprox <= 32.43)) {
       setCameronImage(tucsonPNG);
-    } else if (camLonApprox > -111 && camLonApprox < -80.02) {
+    } else if (camLatApprox > 15 && camLatApprox < 31.4) {
       setCameronImage(mexicoPNG);
     } else if ((camLonApprox >= -112.55 && camLonApprox <= -111.6) && (camLatApprox >= 33.1 && camLatApprox <= 33.9)) {
       setCameronImage(phoenixPNG);
