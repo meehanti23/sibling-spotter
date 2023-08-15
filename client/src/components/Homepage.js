@@ -90,7 +90,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Tim
                         <img
-                            src={newHampshirePNG}
+                            src={airplanePNG}
                             className="tile-picture"
                             alt="desert"
                         />
