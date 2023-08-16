@@ -61,7 +61,8 @@ const Cameron = (props) => {
     'https://siblingspotter.s3.amazonaws.com/camMotorcycle.jpeg',
     'https://siblingspotter.s3.amazonaws.com/camJermView.jpeg',
     'https://siblingspotter.s3.amazonaws.com/camSaltMarsh.jpeg',
-    'https://i.ibb.co/2ycPBm5/allofus1.jpg'
+    'https://i.ibb.co/2ycPBm5/allofus1.jpg',
+    'https://siblingspotter.s3.amazonaws.com/brothersPilot.jpg'
   ]
 
   const getRandomCamPic = () => {

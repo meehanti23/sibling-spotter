@@ -66,7 +66,8 @@ const Jeremy = (props) => {
     'https://siblingspotter.s3.amazonaws.com/jermSki.jpeg',
     'https://siblingspotter.s3.amazonaws.com/jermFogMountain.jpeg',
     'https://siblingspotter.s3.amazonaws.com/jermLake.jpeg',
-    'https://siblingspotter.s3.amazonaws.com/jermTwoMinutes.jpeg'
+    'https://siblingspotter.s3.amazonaws.com/jermTwoMinutes.jpeg',
+    'https://siblingspotter.s3.amazonaws.com/brothersPilot.jpg'
   ];
 
   const getRandomJermPic = () => {
