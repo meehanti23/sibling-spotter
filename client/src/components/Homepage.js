@@ -47,6 +47,7 @@ const Homepage = (props) => {
   useEffect(() => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
+    // const camSchool = 32.2331235 -110.9520875
 
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
