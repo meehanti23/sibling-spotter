@@ -8,6 +8,9 @@ const Homepage = (props) => {
   const [cameronImage, setCameronImage] = useState(null);
   const [cameronLongitude, setCameronLongitude] = useState(null);
   const [cameronLatitude, setCameronLatitude] = useState(null);  
+  const [jeremyImage, setJeremyImage] = useState(null);
+  const [jeremyLongitude, setJeremyLongitude] = useState(null);
+  const [jeremyLatitude, setJeremyLatitude] = useState(null);  
 
   const fetchTimCoordinates = async () => {
     try {
@@ -29,9 +32,20 @@ const Homepage = (props) => {
     }
   };
 
+  const fetchJeremyCoordinates = async () => {
+    try {
+      const response = await axios.get('/api/v1/locationRouter/cameron');
+      setJeremyLatitude(response.data.lat);
+      setJeremyLongitude(response.data.lon);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   // Jeremy PNGs
   const chicagoSkylinePNG = "https://siblingspotter.s3.amazonaws.com/ChicagoSkyline.png"
   const washingtonPNG = "https://siblingspotter.s3.amazonaws.com/washingtonPNG.png"
+  const jeremyAptPNG = "https://siblingspotter.s3.amazonaws.com/jermAptPNG.png"
 
   // Tim PNGs
   const timHousePNG = "https://siblingspotter.s3.amazonaws.com/House1PNG-PhotoRoom.png-PhotoRoom.png"
@@ -57,11 +71,14 @@ const Homepage = (props) => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
     // const camSchool = 32.2331235 -110.9520875
+    // 2327 N Hamlin Chicago, IL
 
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
     const camLonApprox = cameronLongitude ? cameronLongitude.toFixed(2) : null;
     const camLatApprox = cameronLatitude ? cameronLatitude.toFixed(2) : null;
+    const jermLonApprox = jeremyLongitude ? jeremyLongitude.toFixed(2) : null;
+    const jermLatApprox = jeremyLatitude ? jeremyLatitude.toFixed(2) : null;
 
     if ((timLonApprox >= -80.02 && timLonApprox <= -80.01) && (timLatApprox >= 33 && timLatApprox <= 33.02)) {
       setTimImage(timHousePNG);
@@ -89,6 +106,8 @@ const Homepage = (props) => {
       setCameronImage(desertPNG);
     } 
   }, [timLatitude, timLongitude, timImage, cameronLatitude, cameronLongitude, cameronImage]);
+
+  
 
   
   return (
@@ -124,7 +143,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Jeremy
                         <img
-                            src={chicagoSkylinePNG}
+                            src={jeremyAptPNG}
                             className="tile-picture"
                             alt="desert"
                         />
