@@ -34,7 +34,7 @@ const Homepage = (props) => {
 
   const fetchJeremyCoordinates = async () => {
     try {
-      const response = await axios.get('/api/v1/locationRouter/cameron');
+      const response = await axios.get('/api/v1/locationRouter/jeremy');
       setJeremyLatitude(response.data.lat);
       setJeremyLongitude(response.data.lon);
     } catch (error) {
@@ -70,8 +70,7 @@ const Homepage = (props) => {
   useEffect(() => {
     fetchCameronCoordinates();
     fetchTimCoordinates();
-    // const camSchool = 32.2331235 -110.9520875
-    // 2327 N Hamlin Chicago, IL
+    fetchJeremyCoordinates();
 
     const timLonApprox = timLongitude ? timLongitude.toFixed(2) : null;
     const timLatApprox = timLatitude ? timLatitude.toFixed(2) : null;
@@ -88,7 +87,13 @@ const Homepage = (props) => {
       setTimImage(beachPNG)
     } else {
       setTimImage(timHousePNG)
-    }  
+    }
+
+    if((jermLonApprox >= -87.75 && jermLonApprox <= -87.71) && (jermLatApprox >= 41.91 && jermLatApprox <= 41.94)) {
+      setJeremyImage(jeremyAptPNG);
+    } else {
+      setJeremyImage(chicagoSkylinePNG);
+    }
 
     if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
       setCameronImage(camOfficePNG);
@@ -143,7 +148,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Jeremy
                         <img
-                            src={jeremyAptPNG}
+                            src={jeremyImage}
                             className="tile-picture"
                             alt="desert"
                         />
