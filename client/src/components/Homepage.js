@@ -29,20 +29,29 @@ const Homepage = (props) => {
     }
   };
 
-  const airplanePNG = "https://siblingspotter.s3.amazonaws.com/AirplanePhotoRoom.png"
+  // Jeremy PNGs
+  const chicagoSkylinePNG = "https://siblingspotter.s3.amazonaws.com/ChicagoSkyline.png"
+  const washingtonPNG = "https://siblingspotter.s3.amazonaws.com/washingtonPNG.png"
+
+  // Tim PNGs
   const timHousePNG = "https://siblingspotter.s3.amazonaws.com/House1PNG-PhotoRoom.png-PhotoRoom.png"
   const charlestonPNG = "https://siblingspotter.s3.amazonaws.com/%E2%80%94Pngtree%E2%80%94city+seaside+seaside+city+coastal_3923151.png"
-  const camOfficePNG = "https://siblingspotter.s3.amazonaws.com/camOffice-PhotoRoom.png-PhotoRoom.png"
-  const desertPNG = "https://siblingspotter.s3.amazonaws.com/cartoon-desert1-PhotoRoom.png-PhotoRoom.png"
   const swampPNG = "https://siblingspotter.s3.amazonaws.com/SwampPic-PhotoRoom.png"
   const beachPNG = "https://siblingspotter.s3.amazonaws.com/Beach-PhotoRoom.png"
+  
+
+  // Cam PNGs
+  const camOfficePNG = "https://siblingspotter.s3.amazonaws.com/camOffice-PhotoRoom.png-PhotoRoom.png"
+  const desertPNG = "https://siblingspotter.s3.amazonaws.com/cartoon-desert1-PhotoRoom.png-PhotoRoom.png"
   const mexicoPNG = "https://siblingspotter.s3.amazonaws.com/Mexico-PhotoRoom.png"
   const phoenixPNG = "https://siblingspotter.s3.amazonaws.com/MainPhoenix-PhotoRoom.png"
   const tucsonPNG = "https://siblingspotter.s3.amazonaws.com/Tucson-PhotoRoom.png"
-  const newHampshirePNG = "https://siblingspotter.s3.amazonaws.com/pngwing.com+(1).png"
   const camHousePNG = "https://siblingspotter.s3.amazonaws.com/CamHouse-PhotoRoom.png-PhotoRoom.png"
-  const washingtonPNG = "https://siblingspotter.s3.amazonaws.com/washingtonPNG.png"
   const camUniversityPNG = "https://siblingspotter.s3.amazonaws.com/%E2%80%94Pngtree%E2%80%94school+building+cartoon+classroom+school_5701074.png"
+  
+  // Misc PNGs
+  const airplanePNG = "https://siblingspotter.s3.amazonaws.com/AirplanePhotoRoom.png"
+  const newHampshirePNG = "https://siblingspotter.s3.amazonaws.com/pngwing.com+(1).png"
 
   useEffect(() => {
     fetchCameronCoordinates();
@@ -61,7 +70,7 @@ const Homepage = (props) => {
     } else if (timLonApprox > -79.6 && timLonApprox < -60) {
       setTimImage(beachPNG)
     } else {
-      setTimImage(swampPNG)
+      setTimImage(timHousePNG)
     }  
 
     if ((camLonApprox <= -112.08 && camLonApprox >= -112.13) && (camLatApprox >= 33.55 && camLatApprox <= 33.6)) {
@@ -115,7 +124,7 @@ const Homepage = (props) => {
                         <li className="home-button small-3 brother-name">
                         Jeremy
                         <img
-                            src={washingtonPNG}
+                            src={chicagoSkylinePNG}
                             className="tile-picture"
                             alt="desert"
                         />
