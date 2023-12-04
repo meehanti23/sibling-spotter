@@ -86,7 +86,7 @@ const Homepage = (props) => {
     } else if (timLonApprox > -79.6 && timLonApprox < -60) {
       setTimImage(beachPNG)
     } else {
-      setTimImage(timHousePNG)
+      setTimImage(swampPNG)
     }
 
     if((jermLonApprox >= -87.75 && jermLonApprox <= -87.71) && (jermLatApprox >= 41.91 && jermLatApprox <= 41.94)) {
